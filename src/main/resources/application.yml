@@ -1,0 +1,24 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: SpringRestTemplateCaller_IV
+      
+camel:
+  springboot:
+    name: SpringRestTemplateCaller_IV
+
+logging:
+  config: classpath:logback.xml
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9090/eureka/
+      #defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@localhost:9090/eureka/
+    eureka-server-port: 9090
+  instance:
+    hostname: localhost
+    
